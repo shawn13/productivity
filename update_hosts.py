@@ -21,11 +21,10 @@ arch = """127.0.0.1       localhost
 ::1     localhost
 127.0.0.1       hecom.cc
 """
-print "Update your host file start!"
-#print "Please input your su password"
 f = file(r'/tmp/hosts' ,'w+')
 new_host = [arch,pure_hosts]
 f.writelines(new_host)
 f.close()
-os.system('mv /tmp/hosts /etc/hosts')
+os.system('sudo mv /tmp/hosts /etc/hosts')
+os.system('dscacheutil -flushcache')
 print "Update success!"
