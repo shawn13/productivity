@@ -1,5 +1,4 @@
-# coding: utf-8
-# Date: Jan 18 2015
+# -*- coding: UTF-8 -*-
 import urllib2
 import re
 import sys
